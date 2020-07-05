@@ -1,0 +1,3 @@
+Add_button.png, PNGTREE, retrieved 4/6/2020, < https://pngtree.com/so/add >   
+Goal_edit_button.png, PNGTREE, retrieved 4/6/2020, < https://pngtree.com/so/edit-icon  >
+Color_picker_button.png, PNGTREE, retrieved 4/6/2020, < https://pngtree.com/so/color-pallete  >
