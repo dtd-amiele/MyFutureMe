@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">My Future Me</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_main">My Future Me</string>
+    <string name="title_activity_summary">Summary</string>
+    <string name="title_activity_add_goal">Add Goal</string>
+    <string name="title_activity_edit_goal">Edit Goal</string>
+    <string name="title_activity_task_update">Update Task</string>
+    <string name="title_activity_tag_update">Update Tag</string>
+
+    <string name="label_username">Username</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+
+    <string name="label_tag">Tag</string>
+    <string name="label_name">Name</string>
+    <string name="label_description">Description</string>
+    <string name="label_due_date">Due Date</string>
+    <string name="label_date">Date</string>
+    <string name="label_minute">Minute</string>
+
+    <string name="default_goal_name">Default Goal Name</string>
+    <string name="default_task_name">Default Task Name</string>
+    <string name="default_tag_name">Default Tag Name</string>
+    <string name="default_sub_task_name">Default Sub Task Name</string>
+    <string name="default_date">19 May 20</string>
+    <string name="default_dow">Sun</string>
+    <string name="default_minute">0</string>
+
+    <string name="summary_time_per_tag">Distribution of Time towards each tag</string>
+    <string name="summary_time_per_goal">Distribution of Time towards Goals</string>
+    <string name="summary_time_per_day">Contributed Time per day</string>
+
+    <string name="hint_username">Amie</string>
+    <string name="hint_email">amie@gmail.com</string>
+    <string name="hint_password"></string>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_login">Login</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="action_register">Register</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="action_todo">To-do</string>
+    <string name="action_life_style">LifeStyle</string>
+    <string name="action_motivation">Motivation</string>
+    <string name="action_summary">Summary</string>
+
+    <string name="txt_work_task_description">Description: </string>
+    <string name="txt_work_task_overview">Overview: </string>
+
+    <!-- Update Task Activity -->
+    <string name="update_task_progress_value"> %1$d%% </string>
+    <!-- End Update Task Activity -->
+
+    <string name="text_quote"> %1$s (%2$s) </string>
+
+</resources>

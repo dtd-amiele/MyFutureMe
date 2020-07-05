@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/work_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/purple_gradient"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:minHeight="90dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                android:id="@+id/layoutProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="0.5dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="1">
+
+
+                    <ProgressBar
+                        android:id="@+id/recycle_view_goal_pb_time_progres"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/circle_progress"
+                        android:secondaryProgress="50" />
+
+                    <ProgressBar
+                        android:id="@+id/recycle_view_goal_pb_work_load_progres"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/circle_progress"
+                        android:secondaryProgress="50" />
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/recycle_view_goal_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:maxWidth="300dp"
+                    android:padding="10dp"
+                    android:text="@string/default_goal_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/lemonada" />
+
+                <ImageButton
+                    android:id="@+id/recycle_view_goal_iBtn_goal_update"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:layout_marginLeft="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="image"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/goal_edit_button" />
+
+                <ImageButton
+                    android:id="@+id/recycle_view_goal_ibtn_detail_expand"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="image"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/arrow_down_float" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recycle_view_goal_ll_detail"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="#B2A5CF"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_tag"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/recycle_view_goal_ll_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/recycle_view_goal_fl_tag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:alignContent="stretch"
+                            app:alignItems="stretch"
+                            app:flexWrap="wrap">
+
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_date"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recycle_view_goal_tv_due_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/txt_work_task_description"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recycle_view_goal_tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_view_goal_rv_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<RelativeLayout-->
+<!--android:id="@+id/layoutProgressBar"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_gravity="center_vertical"-->
+<!--android:layout_marginStart="0.5dp"-->
+<!--android:layout_marginEnd="0.5dp"-->
+<!--android:layout_weight="1">-->
+
+
+<!--<ProgressBar-->
+<!--    android:id="@+id/progressBar1"-->
+<!--    style="?android:attr/progressBarStyleHorizontal"-->
+<!--    android:layout_width="70dp"-->
+<!--    android:layout_height="70dp"-->
+<!--    android:layout_centerInParent="true"-->
+<!--    android:indeterminate="false"-->
+<!--    android:max="100"-->
+<!--    android:progress="100"-->
+<!--    android:progressDrawable="@drawable/circle_progress"-->
+<!--    android:secondaryProgress="50" />-->
+
+<!--<ProgressBar-->
+<!--    android:id="@+id/progressBar2"-->
+<!--    style="?android:attr/progressBarStyleHorizontal"-->
+<!--    android:layout_width="50dp"-->
+<!--    android:layout_height="50dp"-->
+<!--    android:layout_centerInParent="true"-->
+<!--    android:indeterminate="false"-->
+<!--    android:max="100"-->
+<!--    android:progress="100"-->
+<!--    android:progressDrawable="@drawable/circle_progress"-->
+<!--    android:secondaryProgress="50" />-->
+
+<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/imageView2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:adjustViewBounds="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:srcCompat="@drawable/splashscreen_temp" />&ndash;&gt;-->
+
+
+<!--</RelativeLayout>-->
+
+
+
+<!--<LinearLayout-->
+<!--android:id="@+id/recycle_view_goal_ll_add_task"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:layout_marginBottom="15dp"-->
+<!--android:gravity="center_vertical"-->
+<!--android:orientation="horizontal"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.51"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--tools:visibility="gone">-->
+
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_weight="2"-->
+<!--    android:gravity="center_vertical"-->
+<!--    android:text="Name" />-->
+
+<!--<EditText-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_weight="1"-->
+<!--    android:background="?android:attr/colorBackground"-->
+<!--    android:ems="10"-->
+<!--    android:inputType="textMultiLine|text"-->
+<!--    android:maxLines="2"-->
+<!--    android:singleLine="false" />-->
+
+<!--<ImageButton-->
+<!--    android:id="@+id/recycle_view_goal_ibtn_add_task_done"-->
+<!--    android:layout_width="30dp"-->
+<!--    android:layout_height="30dp"-->
+<!--    android:adjustViewBounds="true"-->
+<!--    android:background="@android:color/transparent"-->
+<!--    android:contentDescription="image"-->
+<!--    android:padding="5dp"-->
+<!--    android:scaleType="fitCenter"-->
+<!--    app:srcCompat="@android:drawable/checkbox_on_background" />-->
+
+<!--<ImageButton-->
+<!--    android:id="@+id/recycle_view_goal_ibtn_add_task_cancel"-->
+<!--    android:layout_width="30dp"-->
+<!--    android:layout_height="30dp"-->
+<!--    android:adjustViewBounds="true"-->
+<!--    android:background="@android:color/transparent"-->
+<!--    android:contentDescription="image"-->
+<!--    android:padding="5dp"-->
+<!--    android:scaleType="fitCenter"-->
+<!--    app:srcCompat="@android:drawable/ic_delete" />-->
+<!--</LinearLayout>-->
+
+<!--<ImageButton-->
+<!--android:id="@+id/recycle_view_goal_ibtn_task_add"-->
+<!--android:layout_width="50dp"-->
+
+<!--android:layout_height="50dp"-->
+<!--android:layout_gravity="center_horizontal"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:layout_marginRight="10dp"-->
+<!--android:adjustViewBounds="true"-->
+<!--android:background="@drawable/rounded_purple_border"-->
+<!--android:contentDescription="image"-->
+<!--android:padding="5dp"-->
+<!--android:scaleType="fitCenter"-->
+<!--app:srcCompat="@android:drawable/ic_menu_add" />-->
